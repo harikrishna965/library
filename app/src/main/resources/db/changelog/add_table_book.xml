@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="3" author="hari">
+        <createTable tableName="books">
+            <column name="id" type="BIGINT">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="title" type="VARCHAR(255)"/>
+            <column name="author" type="VARCHAR(255)"/>
+            <column name="isbn" type="VARCHAR(255)"/>
+            <column name="publisher" type="VARCHAR(15)"/>
+            <column name="year_of_publication" type="bigint">
+            </column>
+            <column name="place_of_publication" type="VARCHAR(15)"/>
+            <column name="available_copies" type="bigint"/>
+            <column name="barcode" type="VARCHAR(15)"/>
+            
+            <column name="created_by" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_date" type="timestamp"/>
+            <column name="last_modified_by" type="varchar(100)"/>
+            <column name="last_modified_date" type="timestamp"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
