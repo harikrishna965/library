@@ -1,7 +1,0 @@
-spring:
-  jpa:
-    properties:
-      hibernate:
-        transaction:
-          jta:
-            platform: org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform
